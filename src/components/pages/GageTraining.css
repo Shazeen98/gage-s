@@ -1,0 +1,378 @@
+/* === RESET DEFAULTS === */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === BANNER CONTAINER (OPTIONAL, for overlay/fade) === */
+.gfs-banner-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gfs-banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gfs-banner img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.7);
+    transform: scale(1.2);
+    transform-origin: center top;
+    z-index: 0;
+    transition: filter 0.3s;
+}
+
+.gfs-banner-overlay {
+    position: relative;
+    margin: 30vh 0 0 1%;
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.gfs-banner-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+
+
+}
+.gfs-banner-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+@media (max-width: 900px) {
+    .gfs-banner-overlay {
+        max-width: 90%;
+        margin-top: 20vh;
+        font-size: 1.1rem;
+    }
+    .gfs-banner-overlay h1 { font-size: 2rem; }
+}
+@media (max-width: 600px) {
+    .gfs-banner-overlay {
+        max-width: 99%;
+        margin-top: 15vh;
+    }
+    .gfs-banner-overlay h1 { font-size: 1.2rem; }
+    .gfs-banner-overlay p { font-size: 0.98rem; }
+}
+
+/* === MAIN SECTION (same as security-section in your previous CSS) === */
+.gfs-training-section {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 3000px;
+    background: #fff !important;
+    border-radius: 0;
+    box-shadow: 0 6px 40px 0 rgba(30, 64, 175, 0.05);
+    padding: 2.4rem 1.2rem 2.8rem 1.2rem;
+    z-index: 2;
+    margin-top: 0vh;
+}
+
+.gfs-training-section p{
+    font-size: 1rem;
+    color: #4A5568;
+    margin: 0 auto 1.6rem auto;
+    max-width: none;
+    line-height: 1.7;
+    text-align: center;
+}
+.card p {
+    text-align: justify;
+    text-align-last: left; /* aligns last line to the left */
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+    padding: 0 1rem; /* Adds left/right spacing inside the card */
+}
+
+
+
+@media (max-width: 800px) {
+    .gfs-section { padding: 1.2rem 0.5rem; }
+}
+
+/* === SLIDER SECTION === */
+.slider-container {
+    overflow: hidden;
+    width: 100vw;
+    margin-top: 20px;
+    background: transparent;
+    position: relative;
+    padding-bottom: 1rem;
+    padding-left: 48px;   /* Same left gap as content for visual harmony */
+    box-sizing: border-box;
+}
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scrollSlider 30s linear infinite;
+    will-change: transform;
+    gap: 14px;  /* Small gap between images */
+}
+@keyframes scrollSlider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}
+.slider-item {
+    flex: 0 0 auto;
+}
+.slider-item img {
+    width: 400px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: block;
+    background: #23272b;
+    transition: transform 0.18s;
+}
+.slider-item img:hover {
+    transform: scale(1.05);
+}
+
+/* === TITLES, INTRO, LIST, DESCRIPTION === */
+.gfs-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #111111 !important;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    letter-spacing: .01em;
+    font-weight: 800;
+}
+.gfs-training-intro {
+    color: #111;
+    text-align: left;
+    max-width: 780px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.17rem;
+    line-height: 1.5;
+    padding-left: 48px;    /* Matches slider left gap */
+}
+.gfs-training-list {
+    list-style: disc outside;
+    color: #111;
+    text-align: left;
+    font-size: 1.09rem;
+    margin: 0 auto 2rem auto;
+    max-width: 550px;
+    padding-left: 48px;   /* Matches slider left gap */
+}
+.gfs-training-list li {
+    margin-bottom: 0.7rem;
+}
+.gfs-training-description {
+    color: #111;
+    text-align: center;
+    max-width: 700px;
+    margin: 2rem auto 2.5rem auto;
+    font-size: 1.11rem;
+    line-height: 1.5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .slider-container,
+    .gfs-training-intro,
+    .gfs-training-list {
+        padding-left: 16px;
+    }
+    .slider-item img {
+        width: 75vw;
+        max-width: 340px;
+        height: 24vw;
+        min-height: 110px;
+    }
+}
+@media (max-width: 600px) {
+    .slider-container,
+    .gfs-training-intro,
+    .gfs-training-list {
+        padding-left: 8px;
+    }
+    .slider-item img {
+        width: 92vw;
+        max-width: 97vw;
+        height: 32vw;
+        min-height: 80px;
+    }
+    .gfs-title { font-size: 1.22rem; }
+
+    .life-gallery,
+    .life-gallery p
+    {
+        display: none !important;
+    }
+
+}
+/* === CARDS GRID === */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 700;
+}
+
+.card-item h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.card-item p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+    text-align: justify;
+}
+
+/* === LIFE AT GAGE GALLERY === */
+.life-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.life-gallery figure {
+    margin: 0;
+}
+
+.life-gallery img {
+    width: 150px;       /* or whatever exact size you want */
+    height: 100px;      /* maintain your desired aspect ratio */
+    object-fit: cover;  /* crops to fill the box */
+    border-radius: 0.25rem;
+}
+
+.life-gallery figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+
+
+
+@media (max-width: 900px) {
+    .cards-grid {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        padding: 0 0.75rem;
+    }
+    .card {
+        padding: 1rem;
+    }
+    .card h2 {
+        font-size: 1.25rem;
+    }
+
+}
+@media (max-width: 768px) {
+    .gfs-banner-overlay h1 { font-size: 1.5rem !important; margin-left: 20px !important;}
+    .gfs-banner-overlay p  { font-size: 1rem !important; margin-right: 20px !important; margin-left: 20px !important; }
+    .security-section__inner h1 { font-size: 1.5rem !important; margin-left: 20px !important;}
+    .security-section__inner p  { font-size: 1rem !important; margin-right: 20px !important; margin-left: 20px !important; }
+    .solution-card p           { font-size: 1rem !important; }
+    .feature-card h2           { font-size: 2rem !important; }
+    .feature-card p            { font-size: 1rem !important; }
+    .why-choose-us h2          { font-size: 1.5rem !important; }
+    .why-choose-us li          { font-size: 1rem !important; }
+
+}
+
+@media (min-width: 2560px) {
+    /* Component Headings */
+    .gfs-title { font-size: 7rem !important; }
+    /* Intro, list, description text */
+    .gfs-training-intro,
+    .gfs-training-list,
+    .gfs-training-description {
+        font-size: 3rem !important;
+    }
+    /* Card titles and items */
+    .cards-grid .card h2 { font-size: 7rem !important; }
+    .card-item h3 { font-size: 3rem !important; }
+    .card-item p  { font-size: 3rem !important; }
+    /* Gallery captions */
+    .life-gallery figcaption { font-size: 3rem !important;  }
+
+    .life-gallery img {
+        width: 450px !important;       /* or whatever exact size you want */
+        height: 300px !important;      /* maintain your desired aspect ratio */
+        object-fit: cover;  /* crops to fill the box */
+        border-radius: 0.25rem;
+    }
+
+    .life-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+        margin-top: 0.75rem;
+    }
+    .card_gt p{
+        font-size: 3rem;
+        text-align: justify;
+
+    }
+}
+
+

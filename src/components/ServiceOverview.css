@@ -1,0 +1,233 @@
+.services-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background: #fff;
+    padding: 1.3rem 0;
+}
+
+.services-divider {
+    border-top: 1px solid #c3b9b9;
+    width: 95%;
+    margin: 0 auto 3rem;
+}
+
+.services-overview {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 3rem;
+    flex-wrap: wrap;
+}
+
+.services-overview__left,
+.services-overview__right {
+    flex: 1 1 50px;
+}
+
+.service-card {
+    position: relative;
+    overflow: visible;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #fff;
+}
+
+.service-logo {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    max-height: 80px;
+    opacity: 0.8;
+}
+
+.service-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.service-card ul {
+    list-style: disc inside;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    margin: 0 0 2rem;
+}
+
+.tabs-list {
+    margin-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.tab-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--tab-bg, #000);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.tab-button.selected {
+    opacity: 1;
+}
+
+.services-text h2 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.services-text p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.explore-link {
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 760px) {
+    .services-overview {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+    .explore-link {
+        /* make it a block so margin:auto will work */
+        display: block;
+        /* center it horizontally and keep your top margin */
+        margin: 1rem auto 0;
+        width: fit-content;       /* shrink to exactly the size of its content */
+
+    }
+
+    .service-logo {
+        position: absolute;
+        top: 2.3rem;
+        right: 1rem;
+        max-height: 60px;
+        opacity: 0.8;
+    }
+
+    .services-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .services-text p {
+        font-size: 0.875rem;
+    }
+
+    .tabs-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tab-button {
+        flex: 1 1 48%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .services-overview {
+        /* remove the old cap, or set it to something much larger */
+        max-width: none;       /* ← allow it to go full-bleed */
+        width: 100%;           /* ← fill the parent .services-section */
+        padding: 0 128px 3rem; /* ← optional: more side padding on huge screens */
+    }
+
+
+    .service-card {
+        position: relative;
+        overflow: visible;
+        border-radius: 38px;
+        padding: 5rem;
+        color: #fff;
+    }
+
+
+    .tabs-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+
+    .services-text h2 {
+        font-size: 4rem;
+    }
+
+    .services-text p {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+
+    .service-card h3{
+        font-size: 70px;
+    }
+
+    .service-card p{
+        font-size: 70px;
+    }
+
+    .service-card ul{
+        font-size: 40px;
+    }
+
+
+    .service-logo {
+        max-height: 120px;
+    }
+
+    .tab-button {
+        padding: 1rem;
+        font-size: 2rem;
+        border-radius: 28px;
+
+
+    }
+
+    .explore-link {
+        font-size: 1.5rem;
+        font-weight: 500;
+        /* make it a block so margin:auto will work */
+        display: block;
+        /* center it horizontally and keep your top margin */
+        margin-right: 10px;
+        width: fit-content;       /* shrink to exactly the size of its content */
+
+    }
+}

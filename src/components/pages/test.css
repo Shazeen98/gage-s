@@ -1,0 +1,78 @@
+/* === RESET DEFAULTS === */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === BANNER CONTAINER === */
+.gfs-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* === FIXED IMAGE === */
+.gfs-banner img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.7);
+    z-index: 0;
+}
+
+/* === OVERLAY TEXT SCROLLS === */
+.gfs-banner-overlay {
+    position: relative;
+    margin-top: 45vh; /* start overlay centered vertically */
+    margin-left: 5%;
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.gfs-banner-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+}
+.gfs-banner-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* === MAIN SECTION === */
+.gfs-section {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* === CONTENT AREA === */
+.gfs-content {
+    background-color: #111;
+    padding: 6rem 0;
+}
+.gfs-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* === FOOTER === */
+footer {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.5rem;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,132 @@
+/* Footer.css */
+
+.footer {
+    background: #111;
+    color: #ccc;
+    padding: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 auto; /* Center icons on desktop */
+}
+
+.footer-social a {
+    color: #bbb;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-inline-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+.footer-divider {
+    color: #555;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+/* Mobile: stack and center everything */
+@media (max-width: 700px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-social,
+    .footer-inline-row {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .footer-social {
+        order: 1;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-inline-row {
+        order: 2;
+        gap: 0.5rem;
+        font-size: 0.8rem; /* Reduced mobile text size */
+    }
+
+    .footer-divider {
+        display: none;
+    }
+}
+
+/* Extra-small mobile tweaks */
+
+@media (max-width: 320px) {
+    .footer {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.5rem;
+    }
+
+    .footer-social a {
+        font-size: 0.7rem;
+    }
+
+    .footer-inline-row {
+        font-size: 0.4rem; /* Further reduced on very small screens */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.5rem;
+    }
+
+    .footer-social a {
+        font-size: 1.3rem;
+    }
+
+    .footer-inline-row {
+        font-size: 0.4rem; /* Further reduced on very small screens */
+    }
+}
+
+@media (min-width: 2560px) {
+    .footer-social a {
+        font-size: 2rem;
+    }
+
+    .footer-inline-row {
+        font-size: 1.2rem; /* Further reduced on very small screens */
+    }
+
+}

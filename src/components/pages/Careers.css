@@ -1,0 +1,113 @@
+/* CAREERS PAGE STYLES */
+
+/* Section wrapper (aligns with AboutUs full-width content) */
+.careers-container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 1rem;
+    width: 100%;
+    background: transparent;
+    position: relative;     /* <-- enable z-index */
+
+    z-index: 10;
+    border-radius: 0;
+}
+
+.careers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* No positions message */
+.no-positions {
+    color: #888;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Career job card */
+.career-card {
+    background: linear-gradient(120deg, #f5f8ff 70%, #eaf3fb 100%);
+    border: 1.5px solid #dde6f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(60, 90, 160, 0.09);
+    padding: 1.3rem 2rem;
+    color: #1a2336;
+    text-decoration: none;
+    transition: box-shadow 0.18s, transform 0.14s;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.career-card:hover {
+    transform: translateY(-4px) scale(1.018);
+    box-shadow: 0 10px 28px 0 rgba(46, 85, 187, 0.11);
+}
+
+/* Card text content */
+.career-title {
+    font-size: 1.17rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.career-meta {
+    font-size: 0.97rem;
+    color: #4261a0;
+    margin-bottom: 4px;
+}
+.career-summary {
+    font-size: 0.98rem;
+    color: #1a2336;
+    margin-bottom: 10px;
+}
+.career-posted {
+    font-size: 0.85rem;
+    color: #778bb5;
+}
+
+/* Headings align center like AboutUs */
+.careers-container h1,
+.careers-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+    .careers-container {
+        max-width: 98vw;
+        padding: 1.2rem 2vw;
+    }
+}
+@media (max-width: 600px) {
+    .careers-container {
+        padding: 1rem 0.5rem;
+    }
+    .career-card {
+        padding: 1rem 1rem;
+    }
+    .career-title { font-size: 1.07rem; }
+}
+
+@media (min-width: 2560px) {
+
+    .careers-container {
+        max-width: 1800px;
+        margin: 2.5rem auto;
+        padding: 1rem;
+        width: 100%;
+
+    }
+
+    .career-title {
+        font-size:3rem;
+    }
+    .career-meta,.career-summary,.career-posted{
+        font-size:2rem;
+
+    }
+}

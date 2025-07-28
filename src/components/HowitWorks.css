@@ -1,0 +1,176 @@
+.how-steps-bg {
+    background: linear-gradient(to bottom, #fff 0%, #c4c4c4 100%);
+    padding: 2rem 0; /* Optional: add vertical space for a nicer look */
+}
+
+.how-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+
+.steps-layout {
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.step-card {
+    background: #f7f7f7;
+    border: 1.7px solid #bdbdbd;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 360px;
+    min-width: 330px;
+    max-width: 530px;
+    padding: 1.3rem 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(100,100,100,0.04);
+}
+
+.step-card-wide {
+    flex: 2 1 90%;
+    min-width: 660px;
+    max-width: 1100px;
+}
+
+.step-icon {
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #111;
+}
+
+.step-desc {
+    color: #444;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .steps-layout {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+    .step-card, .step-card-wide {
+        min-width: 0;
+        max-width: 98vw;
+    }
+}
+@media (max-width: 600px) {
+    .how-title {
+        font-size: 1.16rem;
+    }
+    .step-title {
+        font-size: 1.02rem;
+    }
+    .step-desc {
+        font-size: 0.99rem;
+    }
+    .step-card, .step-card-wide {
+        padding: 0.9rem 0.6rem;
+    }
+}
+{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.how-steps-bg {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(to bottom, #fff 0%, #c4c4c4 100%);
+    padding: 2.5rem 0;
+}
+
+.how-steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+/*Responsive View */
+
+@media (max-width: 768px) {
+    /* Center title and adjust size */
+    .how-title {
+        text-align: center;
+        font-size: 1.5rem;    /* tweak as needed */
+        margin-bottom: 1.5rem;
+    }
+
+    /* Stack steps and reset margins */
+    .steps-layout {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem 1.5rem;
+        gap: 1.2rem;
+    }
+
+    /* Make cards full-width within padding */
+    .step-card,
+    .step-card-wide {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    /* Container padding */
+    .how-steps-container {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    /* Title */
+    .how-title {
+        text-align: center;
+        font-size: 3rem;       /* bigger heading */
+        margin-bottom: 2rem;
+    }
+
+    /* Layout spacing */
+    .steps-layout {
+        gap: 2rem;
+        margin: 0 3rem 2rem;
+    }
+
+    /* Cards */
+    .step-card,
+    .step-card-wide {
+        flex: none;
+        width: 70rem;
+        max-width: none;
+        padding: 2rem 3rem;
+    }
+
+    /* Step title & description */
+    .step-title {
+        font-size: 2.5rem;
+    }
+    .step-desc {
+        font-size: 1.25rem;
+    }
+}

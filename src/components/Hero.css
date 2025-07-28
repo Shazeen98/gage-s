@@ -1,0 +1,333 @@
+/* ===== Base Styles ===== */
+.hero-bg,
+.hero-bg-modern {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    margin-left: calc(-50vw + 50%);
+    color: #fff;
+    padding: 4rem 1rem;
+    overflow: hidden;
+    background:
+            linear-gradient(120deg, rgba(24,32,41,0.86) 40%, rgba(18,18,20,1) 100%),
+            linear-gradient(100deg, rgba(21,27,34,0.75) 30%, transparent 85%),
+            #181f25;
+}
+
+.hero-video-bg,
+.hero-lottie-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.hero-video-bg {
+    opacity: 0.55;
+    object-fit: cover;
+}
+
+.hero-content,
+.hero-buttons,
+.hero-img {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== Mobile First ===== */
+.hero-content {
+    max-width: 95vw;
+    margin: 5rem auto 0;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.hero-title,
+.hero-desc {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 32px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #f0f0f0;
+    color: #111;
+    transition: all 0.2s ease-in-out;
+    min-width: 260px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn.secondary {
+    background: #fff;
+}
+
+.btn:hover {
+    background: #191919;
+    color: #fff;
+}
+
+.hero-img {
+    display: none;
+}
+
+/* ===== Extra Small (max-width: 425px) ===== */
+/* ===== Extra‑Small (max‑width: 425px) – Center All ===== */
+@media (max-width: 425px) {
+    .hero-content {
+        max-width: 95vw;
+        margin: 4rem auto 0;
+        padding: 0 1rem;
+        text-align: center;      /* center titles & desc */
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        max-width: 100%;
+        margin: 0 auto 1.5rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;  /* stack vertically */
+        align-items: center;     /* center buttons */
+        gap: 0.75rem;
+        max-width: 95vw;
+        margin: 1.5rem auto 0;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 0.65rem 1rem;
+        min-width: 100%;         /* full‑width for easy tapping */
+        box-sizing: border-box;
+    }
+}
+
+
+
+/* ===== Tablets (768px+) ===== */
+
+@media (max-width: 760px) {
+    .hero-content {
+        max-width: 90vw;
+        padding: 0 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+
+    }
+
+    .hero-desc {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        min-width: 280px;
+    }
+    .hero-bg {
+        background-position: left top !important;
+    }
+}
+
+
+/* ===== Tablets & Up (min-width: 768px) ===== */
+/* ===== Tablets & Up (min-width: 768px) ===== */
+@media (min-width: 768px) {
+    .hero-content {
+        max-width: 90vw;
+        margin: 2rem auto 0;
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    .hero-title,
+    .hero-desc {
+        text-align: left;
+        margin: 0;
+    }
+
+    /* <-- updated */
+    .hero-buttons {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        /* match the content container */
+        max-width: 90vw;
+        margin: 2rem auto 0;   /* same vertical spacing + auto‑center */
+        padding: 0 2rem;       /* identical left/right gutter */
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        min-width: 90px;
+    }
+
+    .hero-bg {
+        background-position: left top !important;
+    }
+}
+
+
+
+/* ===== Small Laptops (1024px+) ===== */
+@media (min-width: 1024px) {
+    .hero-content {
+        max-width: 1100px;
+        margin: 6rem auto 0;
+        padding-left: 2rem;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .hero-desc {
+        font-size: 1.2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+        margin-left: 0rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        min-width: 240px;
+        height: 40px;
+    }
+
+    .hero-img {
+        display: block;
+        position: absolute;
+        right: -1rem;
+        top: 115px;
+        height: 400px;
+        object-fit: contain;
+        max-width: 95vw;
+    }
+}
+
+/* ===== Medium Desktops (1366px+) ===== */
+@media (min-width: 1366px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-desc {
+        font-size: 1.6rem;
+    }
+
+    .hero-buttons {
+        padding-top: 100px;
+        margin-left: 7rem;
+    }
+
+    .hero-img {
+        top: 200px;
+        height: 400px;
+    }
+}
+
+/* ===== Large Desktops (1440px+) ===== */
+@media (min-width: 1440px) {
+    .hero-content {
+        max-width: 1300px;
+        margin-top: 8rem;
+        padding-left: 3rem;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+        margin-top: 6rem;
+    }
+
+    .hero-desc {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .hero-buttons {
+        margin-left: 4rem;
+    }
+
+    .hero-img {
+        top: 240px;
+        height: 500px;
+    }
+}
+
+/* ===== Ultra-wide (2560px+) ===== */
+@media (min-width: 2560px) {
+    /* this is your “text” container */
+    .hero-content {
+        max-width: 1600px;
+        margin: 15rem auto 0;
+        padding-left: 3rem;
+    }
+
+    /* buttons are still a sibling, so we calculate the same inset */
+    .hero-buttons {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        /* (viewport − contentWidth)/2  + gutter */
+        margin-left:36rem;
+        margin-top: 0;    /* reset any old top margin */
+    }
+
+    .btn {
+        font-size: 2.4rem;
+        min-width: 600px;
+        height: 80px;
+    }
+}
+
+
+

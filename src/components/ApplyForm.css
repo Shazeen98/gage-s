@@ -1,0 +1,130 @@
+/* Container */
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    transition: max-width 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Header */
+.apply-form__header {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+.apply-form__job-title {
+    color: #000;
+}
+
+/* Inputs & textarea */
+.apply-form__input,
+.apply-form__textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #ccd2ee;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.apply-form__textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+/* File input */
+.apply-form__file-label {
+    font-size: 0.97rem;
+    margin-top: 2px;
+    display: block;
+}
+.apply-form__file-input {
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* Error messages */
+.apply-form__error {
+    color: #d71c1c;
+    font-size: 0.98em;
+}
+.apply-form__submit-error {
+    color: #b8322f;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* Buttons */
+.apply-form__submit-btn,
+.apply-form__close-btn {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+.apply-form__close-btn {
+    margin-top: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    font-weight: 600;
+}
+
+/* Submitted message */
+.apply-form__submitted {
+    text-align: center;
+    color: #187d47;
+    padding: 1.5rem 0;
+}
+
+/* Responsive adjustments for large desktops */
+@media (min-width: 1440px) {
+    .apply-form {
+        max-width: 1000px;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    /* target the white “card” wrapper */
+    .career-details-modal-content {
+        /* allow it to grow with viewport */
+        width: min(25vw, 200px) !important;
+        max-width: none       !important;
+        min-width: 700px     !important;
+
+        /* drop any fixed heights so content can expand */
+        height: min(30vw, 2000px) !important;
+
+        max-height: none  !important;
+
+        /* get rid of that inner scrollbar */
+        overflow-y: hidden !important;
+        overflow-x: hidden !important;
+
+        /* extra breathing room */
+        padding: 3rem 2rem  /* adjust as you like */ !important;
+        margin: 2rem auto   /* keep it centered */  !important;
+    }
+
+    .apply-form__header,.apply-form__job-title,.apply-form__input,
+    .apply-form__textarea,.apply-form__file-label,.apply-form__file-input, .apply-form__error,.apply-form__submit-error,.apply-form__submit-btn,
+    .apply-form__close-btn,.apply-form__close-btn,.apply-form__submitted {
+        font-size: 2rem;
+    }
+}
+

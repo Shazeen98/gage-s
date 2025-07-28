@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* Global font for your app */
+body, html, #root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Set global font for ALL elements */
+html, body, #root, * {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  background: #fff;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove duplicate body rules */
+code {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

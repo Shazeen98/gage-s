@@ -1,0 +1,305 @@
+/* === RESET DEFAULTS === */
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === BANNER CONTAINER === */
+.gfs-banner-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gfs-banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.gfs-banner img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.7);
+    transform: scale(1.2);
+    transform-origin: center top;
+    z-index: 0;
+    transition: filter 0.3s;
+}
+
+.gfs-banner-overlay {
+    position: relative;
+    margin: 30vh 0 0 1%;
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.gfs-banner-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+    color: #fff !important;
+}
+.gfs-banner-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .gfs-banner-overlay {
+        max-width: 90%;
+        margin-top: 20vh;
+        font-size: 1.1rem;
+    }
+    .gfs-banner-overlay h1 { font-size: 2rem; }
+}
+@media (max-width: 600px) {
+    .gfs-banner-overlay {
+        max-width: 99%;
+        margin-top: 15vh;
+    }
+    .gfs-banner-overlay h1 { font-size: 1.2rem; }
+    .gfs-banner-overlay p { font-size: 0.98rem; }
+}
+
+
+
+/* === MAIN SECTION === */
+.gfs-section {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 3000px;
+
+    /* pure black fallback and wavy shade overlay */
+    background-color: #000;
+    background-image:
+            url('../../assets/shade.jpg'),
+            linear-gradient(#000, #000);
+    background-size: cover, cover;
+    background-position: center center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, scroll;
+
+    border-radius: 0;
+    box-shadow: 0 6px 40px 0 rgba(30, 64, 175, 0.05);
+    padding: 2.4rem 1.2rem 2.8rem 1.2rem;
+    z-index: 2;
+    margin-top: 0vh;
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+    .gfs-section { padding: 1.2rem 0.5rem; }
+}
+
+/* === CONTENT AREA === */
+.gfs-content {
+    background-color: transparent;
+    padding: 6rem 0;
+    margin-top: 0;
+}
+@media (max-width: 900px) {
+    .gfs-content { padding: 3rem 0; }
+}
+@media (max-width: 600px) {
+    .gfs-content { padding: 1.5rem 0; }
+}
+
+/* === INNER WRAPPER === */
+.gfs-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+@media (max-width: 768px) {
+    .gfs-inner { padding: 0 0.5rem; }
+    .gfs-item-content h3{
+        font-size: 1rem !important;
+    }
+    .gfs-item-content p{
+        font-size: 0.7rem !important;
+
+    }
+    .gfs-fs-title p{
+        font-size: 0.7rem !important;
+
+    }
+}
+
+/* === TITLE === */
+.gfs-fs-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: #f0f0f0 !important;
+}
+@media (max-width: 600px) {
+    .gfs-title { font-size: 1.3rem; }
+}
+
+/* === CARDS GRID === */
+.gfs-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* === INDIVIDUAL CARD === */
+.gfs-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s, transform 0.18s;
+}
+.gfs-card:hover {
+    box-shadow: 0 8px 24px rgba(30,64,175,0.13);
+    transform: translateY(-3px) scale(1.018);
+}
+.gfs-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+@media (max-width: 900px) {
+    .gfs-card-image { height: 140px; }
+}
+.gfs-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gfs-card-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+.gfs-card-content h3 {
+    margin-bottom: 0.7rem;
+    color: #222;
+}
+.gfs-card-content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.gfs-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: none;
+    flex-direction: row;   /* text on left, image on right */
+}
+
+.gfs-section p {
+    font-size: 1.13rem;
+    color: #ffffff;
+    margin: 0 auto 1.6rem auto;
+    max-width: 780px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.gfs-items {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem; /* space between each item */
+    max-width: none;
+}
+
+.gfs-item-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 40ch;  /* limit paragraph width */
+    margin: 0;
+    color: #f0f0f0;
+    text-align: justify;
+}
+.gfs-item-content h3 {
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 40ch;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+.gfs-item-image {
+    margin-left: auto;
+}
+.gfs-item-image img {
+    display: block;
+    width: 380px;
+    height: 250px;
+    object-fit: contain;
+}
+
+@media (min-width: 2560px) {
+    .gfs-inner {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+    /* Banner overlay */
+    .gfs-banner-overlay h1 {
+        font-size: 5rem !important;
+    }
+    .gfs-banner-overlay p {
+        font-size: 3rem !important;
+        line-height: 1.6;
+    }
+    .gfs-banner img {
+        transform: scale(1.4);
+    }
+
+    /* Section title */
+    .gfs-fs-title {
+        font-size: 5rem !important;
+    }
+
+    /* Section paragraphs */
+    .gfs-inner  p {
+        font-size: 3rem !important;
+        line-height: 1.8;
+        max-width: 2000px;
+    }
+
+    /* Equipment item headings and text */
+    .gfs-item-content h3 {
+        font-size: 5rem;
+    }
+    .gfs-item-content p {
+        font-size: 3rem;
+        line-height: 1.8;
+    }
+
+    /* Equipment images */
+    .gfs-item-image img {
+        width: 600px;
+        height: auto;
+        margin-left: 80px;
+    }
+}
+
+
+
+/* === FOOTER === */
+footer {
+    position: relative;
+    z-index: 3;
+
+}

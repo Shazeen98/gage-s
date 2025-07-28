@@ -1,0 +1,347 @@
+/* === RESET DEFAULTS (already recommended globally) === */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* === BANNER CONTAINER === */
+.gfs-banner-wrapper {
+    width: 180vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gfs-banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gfs-banner img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.7);
+    transform: scale(1.2);
+    transform-origin: center top;
+    z-index: 0;
+    transition: filter 0.3s;
+}
+
+
+
+.gfs-banner-overlay {
+    position: relative;
+    margin: 30vh 0 0 1%;
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.gfs-banner-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.7rem;
+
+}
+.gfs-banner-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .gfs-banner-overlay {
+        max-width: 90%;
+        margin-top: 20vh;
+        font-size: 1.1rem;
+    }
+    .gfs-banner-overlay h1 { font-size: 2rem; }
+}
+@media (max-width: 600px) {
+    .gfs-banner-overlay {
+        max-width: 99%;
+        margin-top: 15vh;
+    }
+    .gfs-banner-overlay h1 { font-size: 1.2rem; }
+    .gfs-banner-overlay p { font-size: 0.98rem; }
+}
+
+/* === MAIN SECTION === */
+.security-section {
+    position: relative;
+    left: 50%;
+    width: 100vw;    /* full width, overlay banner style */
+
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 3000px;
+    background: #fff;
+    border-radius: 0rem;
+    box-shadow: 0 6px 40px 0 rgba(30, 64, 175, 0.05);
+    padding: 2.4rem 1.2rem 2.8rem 1.2rem;
+    z-index: 2;
+    margin-top: 0vh; /* pulls section slightly over the banner, tune as you like */
+}
+
+/* === GRID OF SOLUTIONS === */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* center the last two on small screens */
+@media (max-width: 768px) {
+    .solutions-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .solution-card {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+}
+
+/* card styling */
+.solution-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+.solution-card p {
+    font-size: 0.65rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* section title adjustment */
+.sec-title {
+    max-width: 640px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+/* banner, overlay, etc. */
+/* (keep all your existing .gfs-banner… and other styles here) */
+
+
+
+@media (max-width: 800px) {
+    .security-section { padding: 1.2rem 0.5rem; }
+}
+
+.security-section h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: .01em;
+    line-height: 1.12;
+}
+
+.security-section p {
+    font-size: 1rem;
+    color: #4A5568;
+    margin: 0 auto 1.6rem auto;
+    max-width: 780px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Features Grid */
+.security-section .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    width: 85%;
+    margin: 0 auto;
+
+}
+@media (min-width: 800px) {
+    .security-section .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.security-section .feature-card {
+    background: #fff;
+    border-radius: 3rem;
+    padding: 2rem 1.2rem 1.1rem 1.2rem;
+    box-shadow: 0 2px 16px 0 rgb(64, 64, 64);
+    border: none;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.18s;
+    max-width: 330px;
+}
+.security-section .feature-card:hover {
+    transform: translateY(-6px) scale(1.028);
+    box-shadow: 0 10px 28px 0 rgba(46, 85, 187, 0.11);
+}
+.security-section .feature-card img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1rem;
+    filter: saturate(1.1) drop-shadow(0 2px 5px #c2dbf8a7);
+}
+.security-section .feature-card h2 {
+    font-size: 1.17rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 .7rem 0;
+}
+.security-section .feature-card p {
+    color: #4A5568;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* WHY CHOOSE US Section */
+.why-choose-us {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(
+            to bottom,
+            #fff 0%,
+            #c4c4c4 30%,
+            #c4c4c4 65%,
+            #fff 100%
+    );
+    border-radius: 0;
+    padding: 2.7rem 2rem 5rem 2rem;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 0 6px 32px 0 rgba(40, 40, 80, 0.08);
+    margin-top: 3.5rem;
+    margin-bottom: 0;
+}
+.why-choose-us__container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.7rem 2rem 2.2rem 2rem;
+    border-radius: 1.5rem;
+    background: #22262a;
+    text-align: center;
+    position: relative;
+    top: 0;
+    box-shadow: 0 4px 24px 0 rgba(60, 80, 120, 0.14);
+}
+.why-choose-us h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.why-choose-us ul {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 2000px;
+    width: 100%;
+}
+.why-choose-us li {
+    position: relative;
+    font-size: 1.08rem;
+    color: #f0f0f0;
+    margin-bottom: 1.1em;
+    padding-left: 1.7em;
+    line-height: 1.7;
+    max-width: 650px;
+    transition: color 0.2s;
+}
+.why-choose-us li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-size: 1.5em;
+    top: -3px;
+}
+
+/* Gap above footer */
+.white-gap {
+    width: 100vw;
+    height: 48px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+    .security-section { padding: 1.2rem 0.5rem; }
+    .security-section .features { gap: 1.2rem; }
+    .security-section .feature-card { max-width: 99vw; }
+    .why-choose-us__container { max-width: 98vw; padding: 1.4rem 0.7rem; }
+    .why-choose-us ul { max-width: 95vw; }
+}
+@media (max-width: 480px) {
+    .security-section h1 { font-size: 1.13rem;}
+    .why-choose-us__container { padding: 1.2rem 0.3rem; }
+    .why-choose-us h2 { font-size: 1.08rem; }
+    .why-choose-us li { font-size: 0.97rem; }
+    .solution-card p {
+        font-size: 0.3rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .solution-card img{
+        width: 10vw;
+        height: 10vh;
+    }
+}
+@media (min-width: 2560px) {
+    .security-section p {
+        font-size: 1rem;
+        max-width: none;
+        margin: .8rem auto;
+        line-height: 1.6;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .why-choose-us{
+        font-size: 1rem;
+        max-width: none ;
+        line-height: 1.6;
+    }
+    .why-choose-us__container{
+        font-size: 1rem;
+        max-width: none ;
+        line-height: 1.6;
+    }
+
+    .why-choose-us__container li{
+        font-size: 2rem;
+        max-width: none ;
+
+    }
+
+}

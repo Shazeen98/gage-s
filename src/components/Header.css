@@ -1,0 +1,163 @@
+:root {
+    /* ↑ adjust these two for your “top of page” logo size */
+    --logo-height: 60px;
+    --logo-font-size: 1.8rem;
+
+    /* ↑ adjust these two for your “after scroll” logo size */
+    --logo-height-scrolled: 60px;
+    --logo-font-size-scrolled: 1.8rem;
+}
+
+.main-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100vw;
+    background: transparent;
+    z-index: 100;
+    box-shadow: 0 2px 16px rgba(28,63,219,0.06);
+    padding: 0.5rem;
+    transition:
+            box-shadow 0.1s,
+            padding 0.19s,
+            max-width 0.24s,
+            border-radius 0.24s,
+            margin 0.23s,
+            background 2s;
+}
+
+.main-header--not-home {
+    box-shadow: 0 2px 16px rgba(28,63,219,0.12) !important;
+    background: transparent !important;
+}
+
+.main-header--scrolled {
+    background: #fff !important;
+    max-width: 93vw;
+    margin: 0.5rem auto 0;
+    border-radius: 0.85rem;
+    box-shadow: 0 8px 32px rgba(28,63,219,0.12);
+    padding: 0.5rem 0;
+}
+
+/* inner flex container */
+.main-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 0.1rem;   /* was 2rem */
+    padding-right: 0.1rem;  /* keep as-is (or adjust independently) */            /* was 2rem */
+    min-height: 30px;          /* was 40px in scrolled, 20px unscrolled */
+    transition: max-width 0.19s, padding 0.18s, min-height 0.18s;
+}
+
+.main-header--scrolled .main-header-inner {
+    padding-left: 0.1rem;   /* was 2rem */
+    padding-right: 0.1rem;  /* keep as-is (or adjust independently) */
+}
+
+/* logo (unscrolled) */
+.main-logo {
+    display: flex;
+    align-items: center;
+    height: var(--logo-height);
+    font-size: var(--logo-font-size);
+    font-weight: 800;
+    margin-right: 2rem;
+    color: #1C3FDB;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    transition: height 0.18s, font-size 0.18s;
+}
+
+.main-logo img {
+    height: var(--logo-height);
+    width: auto;
+    margin-right: 0.3rem;
+    transition: height 0.16s;
+}
+
+/* nav */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-nav-item {
+    color: #fff;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 0.6em;
+    padding: 0.12em 0.45em;
+    padding-top: 5px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    transition: color 0.18s, background 0.18s;
+}
+
+.header-nav-item:hover {
+    background: #e6e6e6;
+    color: #000 !important;
+}
+
+.main-header--scrolled .header-nav-item {
+    color: #111 !important;
+}
+
+/* scrolled logo override */
+.main-header--scrolled .main-logo {
+    height: var(--logo-height-scrolled);
+    font-size: var(--logo-font-size-scrolled);
+}
+
+.main-header--scrolled .main-logo img {
+    height: var(--logo-height-scrolled) !important;
+}
+
+
+/* move your sizing + transitions here */
+.main-logo__img {
+    height: var(--logo-height);
+    width: auto;
+    margin-right: 0.3rem;
+    transition: height 0.17s cubic-bezier(.7,0,.18,1), filter 0.3s ease;
+}
+
+/* when scrolled: */
+.main-header--scrolled .main-logo__img {
+    height: var(--logo-height-scrolled) !important;
+}
+.main-header--scrolled .main-header-inner {
+    padding: 1rem;             /* was 2rem */
+    min-height: 30px;          /* was 40px */
+}
+
+@media only screen and (min-width: 2560px) {
+    .main-header-inner{
+        padding-left: 0.01rem;   /* was 2rem */
+        padding-right: 0.01rem;  /* keep as-is (or adjust independently) */
+    }
+
+    .main-header--scrolled .main-header-inner {
+        padding-left: 0.01rem;   /* was 2rem */
+        padding-right: 0.01rem;  /* keep as-is (or adjust independently) */
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .header-nav-item {
+
+        font-weight: 500;
+        margin-left: 1rem;
+        font-size: 0.6rem;
+
+
+    }
+
+}

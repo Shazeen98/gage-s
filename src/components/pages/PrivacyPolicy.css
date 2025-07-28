@@ -1,0 +1,94 @@
+/* src/components/PrivacyPolicy.css */
+
+.privacy-policy-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 0;
+    background-color: transparent; /* body provides the black bg */
+    color: #fff;                    /* body provides white text */
+}
+
+.privacy-policy-page h1,
+.privacy-policy-page h2 {
+    margin: 0;
+}
+
+.privacy-policy-page p {
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+
+.privacy-policy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.privacy-policy-list li {
+    list-style-type: disc;
+}
+
+.privacy-policy-page a {
+    color: #0af;
+    text-decoration: none;
+}
+.privacy-policy-page a:hover {
+    text-decoration: underline;
+}
+
+/* Ultra‑wide layout for screens ≥2560px */
+@media screen and (min-width: 2560px) {
+    .privacy-policy-page {
+        width: 90%;
+        max-width: 3200px;    /* allow the container to stretch */
+        padding: 4rem 6rem;    /* extra padding on big screens */
+        gap: 2rem;             /* more space between sections */
+    }
+
+    .privacy-policy-page h1 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    .privacy-policy-page h2 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-policy-page p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .privacy-policy-list {
+        gap: 1rem;             /* bigger gap between list items */
+        padding-left: 2.5rem;  /* more indent */
+        margin: 1rem 0 2rem;
+    }
+    .privacy-policy-list li {
+        font-size: 1.25rem;
+    }
+
+    .privacy-policy-page a {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce gap between headings and the following paragraph */
+    .privacy-policy-page h1,
+    .privacy-policy-page h2 {
+        margin-bottom: 0.5rem;  /* tighten up from default */
+    }
+
+    .privacy-policy-page p {
+        margin-top: 0;          /* eliminate any extra top space */
+        margin-bottom: 1rem;    /* keep a little breathing room */
+    }
+
+}

@@ -1,0 +1,138 @@
+/* CallToAction.css */
+
+.call-to-action {
+    background: #111;
+    color: #fff;
+    border-radius: 28px;
+    padding: 0.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1050px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px rgba(20, 20, 20, 0.05);
+}
+
+.call-to-action__image-container {
+    flex: 0 0 260px;
+    min-width: 170px;
+    text-align: center;
+}
+
+.call-to-action__image {
+    max-height: 230px;
+    width: auto;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.call-to-action__content {
+    flex: 1;
+}
+
+.call-to-action__title {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0;
+    margin-left: 200px;
+    line-height: 1.15;
+}
+
+.call-to-action__text {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 1rem 0 2rem 0;
+    margin-left: 200px;
+}
+
+.call-to-action__button {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+    background: transparent;
+    font-weight: 200;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+.call-to-action__button:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* Responsive Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .call-to-action {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .call-to-action__image {
+        margin-left: 0;
+        max-height: 200px;
+    }
+
+    .call-to-action__title,
+    .call-to-action__text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .call-to-action__image-container {
+        display: none;
+    }
+
+    .call-to-action__button {
+        display: block;
+        width: 160px; /* fixed width on small screens */
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+}
+
+/* Styles for very large screens (2560px and above) */
+@media (min-width: 2560px) {
+    .call-to-action {
+        max-width: 3000px; /* allow more width */
+        height: 500px; /* fixed height for better scaling */
+        gap: 3rem;
+        padding: 1.5rem 2rem;
+        border-radius: 40px;
+    }
+
+
+    .call-to-action__image-container {
+        flex: 0 0 260px;
+        min-width: 700px;
+        text-align: center;
+    }
+
+    .call-to-action__image {
+        max-height: 700px !important; /* override default max-height */
+        width: auto;
+        display: inline-block;
+        margin-left: 100px;
+    }
+
+    .call-to-action__title {
+        font-size: 48px;
+        margin-left: 550px;
+    }
+
+    .call-to-action__text {
+        font-size: 36px;
+        margin-left: 550px;
+    }
+
+    .call-to-action__button {
+        margin-left: 550px;
+        padding: 0.4rem 0.8rem;
+        font-size: 25px;
+    }
+}

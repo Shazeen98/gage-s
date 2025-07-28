@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Red+Hat+Text:wght@400;700&display=swap');
+
+.about-section {
+    border-top: 1px solid #c3b9b9;
+    padding: 2.2rem 0 0 0;
+    background: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2.5rem;
+}
+
+.about-left {
+    flex: 2 2 150px;
+    min-width: 0;
+    padding-top: 1.5rem;
+}
+
+.about-left h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+.about-desc {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #191919;
+    margin: 0.2rem 0 0.5rem;
+    line-height: 1.35;
+    word-break: break-word;
+}
+
+.about-link {
+
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.6rem;
+    margin-bottom: 0;        /* ensure no bottom gap */
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    background: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.about-link .arrow {
+    margin-left: 0.3em;
+    font-size: 1.2em;
+}
+
+.about-right {
+    flex: 0 0 25px;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
+    margin-top: 0.2rem;
+}
+
+.about-video {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 0;            /* absolutely no extra gap */
+}
+
+.about-globe {
+    width: 260px;
+    filter: grayscale(10%);
+}
+
+/* ===== RESPONIVE STACK AT ≤900px ===== */
+@media (max-width: 900px) {
+    .about-inner {
+        flex-direction: column;
+        gap: 1rem;             /* tightened */
+        padding: 0 1rem;
+    }
+
+    .about-left {
+        padding-top: 0.5rem;
+    }
+
+    .about-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;         /* removed */
+    }
+
+    .about-globe {
+        width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* 320px – Eliminate gap entirely (even overlap if needed) */
+@media (max-width: 320px) {
+    .about-inner {
+        gap: 0 !important;
+        padding: 0 .3rem !important;
+    }
+
+    .about-left {
+        padding-top: 0 !important;
+    }
+
+    .about-left h1 {
+        margin-bottom: 0 !important;
+
+    }
+
+    .about-desc {
+        margin: 0 !important;
+    }
+
+    .about-link {
+        margin-bottom: 0 !important;
+        padding: 0.1rem 0.2rem !important;
+    }
+
+    .about-right {
+        margin-top: 0 !important;
+    }
+
+    /* negative margin to pull the video up over the link */
+    .about-video {
+        margin-top: -0.4rem !important;
+    }
+}
+
+
+
+
+/* 375px – Small Phones */
+@media (max-width: 375px) {
+    .about-left h1 { font-size: 19px; }
+    .about-desc { font-size: 14px; }
+    .about-video {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+/* 425px – Large Phones */
+@media (max-width: 425px) {
+    .about-left h1 { font-size: 20px; }
+    .about-desc { font-size: 14.5px; }
+    .about-video {
+        width: 100%;
+        height: 170px;
+    }
+}
+
+/* 768px – Tablets */
+@media (max-width: 768px) {
+    .about-inner { padding: 0 1.5rem; }
+    .about-left h1 { font-size: 22px; }
+    .about-desc { font-size: 15px; }
+    .about-video {
+        display: none;
+    }
+
+
+}
+
+/* 1024px – Small Laptops */
+@media (max-width: 1024px) {
+    .about-left h1 { font-size: 24px; }
+    .about-desc { font-size: 15.5px; }
+    .about-globe { width: 240px; }
+}
+
+/* 1440px – Large Screens */
+@media (min-width: 1440px) {
+    .about-inner { max-width: 1280px; }
+    .about-left h1 { font-size: 27px; }
+    .about-desc { font-size: 16px; }
+}
+
+/* 2560px – 2K Ultra-Wide */
+@media (min-width: 2560px) {
+    .about-inner {
+        max-width: 3600px;
+        gap: 4rem;
+    }
+    .about-left h1 { font-size: 42px; }
+    .about-desc {
+        font-size: 36px;
+        line-height: 1.5;
+    }
+    .about-globe { width: 400px; }
+    .about-video {
+        width: 300px !important;
+        height: 300px;
+    }
+
+    .about-link {
+        font-size: 25px;
+    }
+}

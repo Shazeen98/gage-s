@@ -1,0 +1,295 @@
+/* === RESET === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+/* === FULL‑WIDTH CONTAINERS === */
+.gfs-banner-wrapper,
+.gfs-banner,
+.gfs-training-section,
+.about-us-content {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 2;
+}
+
+.gfs-banner-wrapper,
+.gfs-banner {
+    height: 100vh;
+    overflow: hidden;
+}
+.gfs-training-section {
+    max-width: 1120px;
+    box-shadow: 0 6px 40px rgba(30, 64, 175, 0.05);
+    padding: 2.4rem 1.2rem 2.8rem;
+    margin-top: -10vh;
+}
+
+/* === BANNER IMAGE & OVERLAY === */
+.gfs-banner img {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.7);
+    transform: scale(1.2);
+    transform-origin: center top;
+    transition: filter 0.3s;
+    z-index: 0;
+}
+
+.gfs-banner-overlay {
+    position: relative;
+    margin: 30vh 0 0 1%;
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.gfs-banner-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: .7rem;
+}
+.gfs-banner-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+
+/* === ABOUT‑US CONTENT === */
+.about-us-content {
+    min-height: 100vh;
+    margin-top: 0;
+    padding: 2.5rem 0;
+
+}
+
+/* SECTION TITLES */
+.about-us-content h1,
+.about-us-content h2,
+.sec-title,
+.why-choose-us__container h2,
+.solutions > h2 {
+    text-align: center;
+    margin-top: 0;
+
+}
+
+/* === FEATURE GRID === */
+.features,
+.solutions-grid {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.features {
+    grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* FEATURE CARDS */
+.feature-card {
+    background: #fff;
+    border-radius: 3rem;
+    padding: 2rem 1.2rem 1.1rem;
+    box-shadow: 0 2px 16px rgba(179,179,179,1);
+    max-width: 330px;
+    text-align: center;
+    transition: transform .15s, box-shadow .18s;
+}
+.feature-card:hover {
+    transform: translateY(-6px) scale(1.028);
+    box-shadow: 0 10px 28px rgba(46,85,187,.11);
+}
+.feature-card img {
+    width: 80px; height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+.feature-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.feature-card p {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* === SERVICES === */
+.services,
+.solutions {
+    text-align: center;
+    width: 100%;
+}
+.services {
+    margin-top: 4rem;
+}
+.services h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.services p {
+    font-size: 1rem;
+    color: #4A5568;
+    max-width: 640px;
+    margin: .5rem auto;
+    line-height: 1.6;
+}
+
+/* === SOLUTIONS GRID === */
+.solutions {
+    margin-top: 14rem;
+    font-size: .7rem;
+}
+.solutions h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.solutions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.solution-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.solution-card img {
+    width: 60px; height: 60px;
+    object-fit: contain;
+    margin-bottom: .5rem;
+}
+.solution-card p {
+    font-size: .65rem;
+    margin: 0;
+}
+
+/* === RESPONSIVE TWEAKS === */
+@media (max-width: 900px) {
+    .gfs-banner-overlay {
+        max-width: 90%;
+        margin-top: 20vh;
+        font-size: 1.1rem;
+    }
+    .gfs-banner-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-us-content {
+        padding: 1.2rem 0;
+    }
+    .features {
+        gap: 1.2rem;
+    }
+    .feature-card {
+        max-width: 98vw;
+    }
+    .solutions-grid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gfs-banner-overlay {
+        max-width: 99%;
+        margin-top: 15vh;
+    }
+    .gfs-banner-overlay h1 {
+        font-size: 1.2rem;
+    }
+    .gfs-banner-overlay p {
+        font-size: .98rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-content h1 {
+        font-size: 1.13rem;
+    }
+    .feature-card {
+        padding: .7rem;
+    }
+    .feature-card h2 {
+        font-size: 1rem;
+    }
+    .feature-card p {
+        font-size: .92rem;
+    }
+    .solutions h2 {
+        font-size: 1.08rem;
+    }
+    .solution-card p {
+        font-size: .58rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .gfs-banner-overlay p {
+        text-align: left;
+        margin-right: 30px;
+    }
+    .services p {
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .services p {
+        font-size: 1rem;
+        max-width: none;
+        margin: .8rem auto;
+        line-height: 1.6;
+        margin-left: 10%;
+        margin-right: 10%;
+
+
+    }
+    .gfs-banner-overlay h1 { font-size: 5rem !important; }
+    .gfs-banner-overlay p  { font-size: 3rem !important; }
+    .about-us-content h2    { font-size: 3rem !important; }
+    .about-us-content p     { font-size: 3rem !important; }
+    .feature-card h2        { font-size: 5rem !important; }
+    .feature-card p         { font-size: 3rem !important; }
+    .services h2            { font-size: 5rem !important; }
+    .services p             { font-size: 3rem !important; }
+    .solutions h2           { font-size: 5rem !important; }
+    .solution-card p        { font-size: 1.5rem !important; }
+
+    .feature-card {
+
+        max-width: 630px;
+
+    }
+
+    .solution-card img {
+        width: 90px !important; height: 90px !important;
+
+    }
+
+}
